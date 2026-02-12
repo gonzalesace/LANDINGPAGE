@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="ACE M. GONZALES">
+  <title>Photo Gallery - Ace Gonzales</title>
+  <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.8;
+            color: #000000;
+            background: #EEFFFF;
+            padding: 20px;
+        }
+        
+        .blog-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .blog-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            border-bottom: 5px solid white;
+        }
+
+        .greeting {
+            font-size: 1.2em;
+            opacity: 0.95;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        
+        .blog-header h1 {
+            font-size: 3em;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            line-height: 1.3;
+        }
+
+        .highlight {
+            color: #ffd700;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .blog-content {
+            padding: 50px 40px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .gallery-item {
+            background: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin: 0;
+            opacity: 1;
+            border-radius: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-image img {
+            transform: scale(1.05);
+        }
+
+        .back-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin-top: 20px;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-header h1 {
+                font-size: 2em;
+            }
+            
+            .blog-content {
+                padding: 30px 25px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .gallery-image {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-container">
+        <div class="blog-header">
+            <p class="greeting">Captured Moments</p>
+            
+            <h1><span class="highlight">My Hobbies</span></h1>
+            
+        </div>
+
+        
+        <div class="blog-content">
+            <div class="gallery-grid">
+                <a href="../PICTURES/hobby1.jpg" class="gallery-item" title="New shoes for my baby" target="gallery">
+                    <div class="gallery-image">
+                        <img src="../PICTURES/hobby1.jpg" alt="My Hobbies">
+                    </div>
+                </a>
+
+                <a href="../PICTURES/hobby2.jpg" class="gallery-item" title="My baby" target="gallery">
+                    <div class="gallery-image">
+                        <img src="../PICTURES/hobby2.jpg" alt="Photo 2">
+                    </div>
+                </a>
+
+                <a href="../PICTURES/hobby3.jpg" class="gallery-item" title="Big C" target="gallery">
+                    <div class="gallery-image">
+                        <img src="../PICTURES/hobby3.jpg" alt="Photo 3">
+                    </div>
+                </a>
+
+                <a href="../PICTURES/hobby4.jpg" class="gallery-item" title="Chaser" target="gallery">
+                    <div class="gallery-image">
+                        <img src="../PICTURES/hobby4.jpg" alt="Photo 4">
+                    </div>
+                </a>
+
+                <a href="../PICTURES/hobby5.jpg" class="gallery-item" title="My Bestfriend" target="gallery">
+                    <div class="gallery-image">
+                        <img src="../PICTURES/hobby5.jpg" alt="Photo 5">
+                    </div>
+                </a>
+
+                <a href="../PICTURES/hobby6.jpg" class="gallery-item" title="Leeg tama" target="gallery">
+                    <div class="gallery-image">
+                        <img src="../PICTURES/hobby6.jpg" alt="Photo 6">
+                    </div>
+                </a>
+
+                <a href="../PICTURES/hobby7.jpg" class="gallery-item" title="Marilaque" target="gallery">
+                    <div class="gallery-image">
+                        <img src="../PICTURES/hobby7.jpg" alt="Photo 7">
+                    </div>
+                </a>
+
+                <a href="../PICTURES/hobby8.jpg" class="gallery-item" title="Turn 7" target="gallery">
+                    <div class="gallery-image">
+                        <img src="../PICTURES/hobby8.jpg" alt="Photo 8">
+                    </div>
+                </a>
+
+                <a href="../PICTURES/hobby9.jpg" class="gallery-item" title="Iwan pati pamilya" target="gallery">
+                    <div class="gallery-image">
+                        <img src="../PICTURES/hobby9.jpg" alt="Photo 9">
+                    </div>
+                </a>
+
+                <a href="../PICTURES/Basketball.jpg" class="gallery-item" title="Basketball" target="gallery">
+                    <div class="gallery-image">
+                        <img src="../PICTURES/Basketball.jpg" alt="happy friends">
+                    </div>
+                </a>
+            </div>
+
+            <div class="button-container">
+                <a href="PHOTOGALLERY.html" class="back-button">← Back to Gallery</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
