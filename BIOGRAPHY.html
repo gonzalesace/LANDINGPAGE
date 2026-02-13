@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="tl">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="ACE M. GONZALES">
+  <title>Ang Aking Buhay: Mula Bataan Hanggang Manila</title>
+  <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.8;
+            color: #000000;
+            background: #EEFFFF;
+            padding: 20px;
+        }
+        
+        .blog-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .blog-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px 40px;
+            text-align: center;
+        }
+        
+        .blog-header h1 {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .blog-meta {
+            font-size: 0.95em;
+            opacity: 0.9;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .navigation-links {
+            background: #f8f9fa;
+            padding: 25px 40px;
+            text-align: center;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .navigation-links h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-btn:hover {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .back-home-btn {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .back-home-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .blog-content {
+            padding: 50px 40px;
+        }
+        
+        .intro {
+            font-size: 1.1em;
+            color: #000000;
+            margin-bottom: 35px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-left: 5px solid #667eea;
+            border-radius: 5px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #f0f0f0;
+        }
+        
+        p {
+            margin-bottom: 0;
+            text-align: justify;
+            text-indent: 0.5in;
+        }
+
+        p + p {
+            margin-top: 0;
+        }
+
+        .intro p, .highlight-box p, .conclusion p {
+            text-indent: 0;
+        }
+        
+        .highlight-box {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 4px solid #3498db;
+        }
+        
+        .conclusion {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 40px;
+            border: 2px solid #667eea30;
+        }
+        
+        .quote {
+            font-style: italic;
+            font-size: 1.05em;
+            color: #000000;
+            padding-left: 20px;
+            border-left: 3px solid #bdc3c7;
+            margin: 20px 0;
+        }
+
+        .highlight-text {
+            background: #ffff00;
+            padding: 2px 4px;
+            font-weight: bold;
+        }
+        
+        .blog-footer {
+            background: #f8f9fa;
+            padding: 25px 40px;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            .blog-header h1 {
+                font-size: 1.8em;
+            }
+            
+            .blog-content {
+                padding: 30px 25px;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .nav-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-btn {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-container">
+        <div class="blog-header" id="top">
+            <h1>Ang Aking Buhay: Mula Bataan Hanggang Manila</h1>
+            <p class="blog-meta">A Journey Through Time and Places | January 21, 2006 - Present</p>
+        </div>
+
+        <div class="navigation-links">
+            <h3>Quick Navigation</h3>
+            <div class="nav-buttons">
+                <a href="#childhood" class="nav-btn">Childhood</a>
+                <a href="#teenage" class="nav-btn">Teenage Years</a>
+                <a href="#college" class="nav-btn">College Years</a>
+                <a href="index.html" class="nav-btn back-home-btn">Back to Home</a>
+            </div>
+        </div>
+        
+        <div class="blog-content">
+            <div class="intro">
+                <p>Ako po ay ipinanganak nung January 21, 2006 sa Samal, Bataan po. Ito ang kwento ng aking buhay - mula sa mga simpleng araw sa probinsya, hanggang sa mga hamon ng buhay estudyante sa Manila. Isang paglalakbay na puno ng pagbabago, pag-asa, at patuloy na pag-unlad.</p>
+            </div>
+            
+            <div class="section" id="childhood">
+                <h2>Mga Unang Taon: Bataan at ang Aking Lola</h2>
+                
+                <p>Wala po ako masyadong memory nung time nag-aaral pa po ako sa Bataan nung bata pa po ako. Ang memory ko lang po nung bata ako is si Lola po, kasi po sya po lagi nag-aalaga sakin nung nasa Bataan pa po ako. Kasi po si Papa nag-aalaga po ng lupa namin, magsasaka po si Papa. At wala din po akong memory kay Mama, ni hindi ko nga po alam kung ano itsura ni Mama until recently, kasi po namatay na po sya nung time na baby pa lang daw po ako.</p>
+                
+                <p>Kaya po lagi lang po ako nakikita si Lola po. Kaya po inampon po ako ni Dad, which is pinsan ko po, pero po Dad na po tawag ko saknya simula nung bata pa lang po ako. At nung time na inampon nya po ako, dun ko na po nameet mga pamangkin ko na kaedad ko lang. Kaya po naging close agad po kaming lahat, tas naglalaro po kami sa labas magdamag.</p>
+
+                <img src="PICTURES/boracay(2).jpg" alt="Boracay vacation 2011" class="section-image">
+
+                <div class="highlight-box">
+                    <p><strong>Memorable Moment:</strong> Madalas din po kaming mag-vacation nung time na yun, at ang isa sa mga favorite na pinuntahan po namin is Boracay, 2011 po ata yun. Kaya napaka-linis pa po talaga ng Boracay. Kaya ko po sya isa sa mga favorite ko, kasi po nung time na nag-Boracay po kami, ang dami pong nag-papicture sakin na mga Koreana. I dont know why, we all dont know why, pero nag-papic lang po talaga sila sakin.</p>
+                </div>
+
+
+                <p>Pero ang pinaka-favorite ko po talaga na memory ko po sa childhood ko po is yung lagi po kami naglalaro sa labas ng mga pinsan ko, kasama po namin mga tropa namin. Mala tipong umaga pa lang nasa labas na po kami, tas uuwi lang po kami pag kakain, tas matutulog po ng tanghali, tas pag hapon na po labas naman po uli hanggang gabi.</p>
+
+                <div class="quote">
+                    "Those were the best days of my childhood, playing outside without a care in the world."
+                </div>
+
+                <div class="button-container">
+                    <a href="#top" class="btn">Go to TOP</a>
+                </div>
+            </div>
+            
+            <div class="section" id="teenage">
+                <h2>Teenage Years: Mga Pagbabago at Bagong Simula</h2>
+                
+                <img src="PICTURES/classpic.jpg" alt="High school days" class="section-image">
+                
+                <p>My teenage years began nung time ako ay pumasok na ng high school at the age of thirteen. At nung time na un napaka-daming changes, kasi po public po ako nung elementary. Eh kapag public po, diba po sobrang gulo, maingay, makalat. Eh inenroll po ako ni Dad sa private and Catholic school, which is sa Blessed Sacrament Catholic School. Kaya po napaka-laki ng changes sakin.</p>
+                
+                <p>Of course new subjects, new classmates, tas dagdag nyo pa po yung pressure galing sa po sa mga tao sa bahay. Pero overall yung experience ko po nung Grade 7 po ako is okay naman po. Dun ko po natutunan ung mga di natuturo sa public school, which is discipline. Tho hindi ko masyado naiimply nung time na un, kasi nga makulet ako, pero nadala ko naman sa next school ko. <span class="highlight-text">The transition from public to private Catholic education was challenging but transformative, teaching me the value of discipline and structured learning lessons that continue to guide my educational journey today.</span></p>
+
+                <p>Lumipat po kasi kami ng Pasig nung Grade 8 po ako, kaya po new classmates naman po. Eto na po yung time na nag-explore na po talaga ako, kasi po nagkaroon po ako ng girlfriend, which is si Audrey. She's my first love. She taught me how to love myself, she taught me how to understand people from their point of view. She really helped me a lot, not only to that but also in acads. <span class="highlight-text">Through meaningful relationships during my teenage years, I developed crucial interpersonal skills including empathy, perspective-taking, and self-awareness soft skills that complemented my academic development.</span></p>
+
+                <div class="highlight-box">
+                    <p><strong>The COVID Challenge:</strong> Nung Grade 9 po bumalik na po kami ng Quezon City, so bumalik din po ako sa Blessed Sacrament Catholic School. Pero eto na po ung time na nagkaroon ng COVID, kaya po online ang klase. Dito na po nag-sisibagsakan ang mga grades ko, kasi po hindi po ako sanay and nahihirapan po ako, kasi po wala po akong PC nung Grade 9.</p>
+                </div>
+
+                <p>Pero nung Grade 10 binilhan naman na po ako ni Dad ng aking first laptop, and till now yan pa din po aking ginagamit. <span class="highlight-text">My first laptop, received in Grade 10, remains my primary tool for education today demonstrating resourcefulness, careful maintenance of educational tools, and appreciation for the investments made in my education by my family.</span> Grade 11 andito na po kami sa current address po namin, which is sa San Juan in Manila po. Kasi po ang gusto po ni Dad is malapit po kami sa Manila para po di hassle sa pag-commute. Nag-aral po ako ng Senior High School sa Arellano University Juan Sumulong Campus, which is sa Legarda po ang location nila. Dito ko na po nakilala ang mga day ones na tropa ko po, at yun hanggang sa makagraduate po kami, sila sila pa din po kasama ko.</p>
+
+                <div class="button-container">
+                    <a href="#top" class="btn">Go to TOP</a>
+                </div>
+            </div>
+            
+            <div class="section" id="college">
+                <h2>College Life: University of the East at Mga Bagong Kaibigan</h2>
+                
+                <img src="PICTURES/firstdayy.jpg" alt="University of the East" class="section-image">
+                
+                <p>Pero hindi ko na po sila kasama sa college, so new classmate and new subjects naman po. Ang napili ko pong school is University of the East. I took Bachelor of Science in Information Technology. First semester was fine, kumbaga reality versus expectation talaga ang nangyare sakin. <span class="highlight-text">Enrolling in BSIT at UE marked a significant decision in my academic career, and the gap between expectations and reality in my first semester taught me valuable lessons about adapting to higher education's demands and setting realistic goals.</span></p>
+
+                <img src="PICTURES/friends.jpg" alt="College friends" class="section-image">
+
+                <p>And here ko na po nakilala si Gab, which is my bestfriend right now, and naniniwala ako na hanggang tumanda na kami magkasama neto ni Gab. Lahat po nasasabi ko sakanya, and nasasabi nya din po sakin lahat. Nandyan po sya pag kailangan ko sya, nandyan din po ako pag kailangan nya ako.</p>
+
+                <p>Dito ko na din po nakilala sila Lexcen and Rohan and Jayvee and Jamir. Kaso po si Lexcen and Rohan umalis na po kaagad nung mag-start na po ng second sem dahil sa family problems. Second semester it's just me, Jayvee and Gab. We thought na wala kaming magiging close, pero there's one circle of friend na sobrang makukulit and friendly, which is sila Hadley, Eugene, Tobey and Chantil.</p>
+
+                <div class="highlight-box">
+                    <p><strong>My First Circle:</strong></p>
+                    <p>Si Hadley po sya po ung tipong tao na tahimik lang, pero pag kakailangan mo lagi syang nandyan. Si Eugene naman po is di ko po kasi sya masyadong close, lagi pong may awkward moments saming dalawa, hindi ko din po alam kung baket. Si Tobey naman po isa din po yang makulit, parang Gab lang po pero mas makulit po siguro. Si Chantil po pinaka-makulit saming lahat.</p>
+                </div>
+
+
+                <p>Pero may iba din po akong circle of friend, which is sila Pau, Marylene, Marla, Ryuji, Mark, Ken, and MK. Si Pau sya ung tipong napaka-sayahing tao. Si Marylene sya po ung tipong mabait, pero kapag nagalit, galit talaga. Si Marla naman po para po syang nanay sa circle po nila, nanay in a good way. Si Ryuji naman po para din po syang si Hadley na tahimik lang po, pero pag kakailangan mo lagi po syang nandyan. Si Mark po di ko po masyadong close si Mark, pero makulit din po yan si Mark, good vibes po palagi. Si Ken po tahimik lang. Si MK naman po sobrang kulet. <span class="highlight-text">Managing and collaborating with diverse personalities has enhanced my teamwork skills, teaching me how different strengths complement each other in group projects and academic pursuits.</span></p>
+
+                <div class="button-container">
+                    <a href="#top" class="btn">Go to TOP</a>
+                </div>
+            </div>
+
+            <div class="conclusion">
+                <h2>Hanggang Ngayon: Ang Patuloy na Paglalakbay</h2>
+    
+                <p>Eto na din po ung downfall ng UE, for me lang po, kasi po super duper dami ng nagsialisan po sa UE. <span class="highlight-text">Despite witnessing many classmates leave the university, I chose to persist and adapt, demonstrating resilience and commitment to my educational goals even in challenging circumstances.</span> College life taught me a lot about friendship, loyalty, and dealing with change. Mula sa mga simpleng araw sa Bataan kung saan ang buhay ay walang komplikasyon, hanggang sa mga hamon ng kolehiyo sa Manila - ang bawat yugto ng aking buhay ay may sariling kwento at aral. Ang mga taong dumaan sa aking buhay - si Lola, si Dad, si Audrey, at ang aking mga kaibigan - lahat sila ay bahagi ng aking pagiging ako.</p>
+
+                <p>Hindi ko alam kung saan ako dadalhin ng kinabukasan, pero alam ko na ang mga karanasang ito ang bumubuo sa kung sino ako ngayon. At habang patuloy akong lumalaki at natututo, dala-dala ko ang mga alaala at aral mula sa nakaraan, habang sabik na naghihintay sa kung ano pa ang darating.</p>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
