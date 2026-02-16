@@ -144,120 +144,11 @@
             font-size: 1em;
             color: #764ba2;
             margin-bottom: 8px;
-            font-weight: 500;
-        }
-
-        .content-details {
-            color: #666;
-            font-size: 0.95em;
-            margin-bottom: 10px;
-        }
-
-        .content-year {
-            color: #555;
-            font-size: 0.9em;
-            font-weight: 500;
-            margin-bottom: 8px;
-        }
-
-        .content-description {
-            color: #666;
-            font-size: 0.9em;
-            line-height: 1.5;
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-
-        .content-genre {
+            font-weight: 700;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+            padding: 5px 10px;
+            border-radius: 5px;
             display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-size: 0.85em;
-            margin-right: 8px;
-            margin-bottom: 8px;
-        }
-
-        .rating {
-            color: #ffd700;
-            font-size: 1.1em;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        .section-title {
-            font-size: 2em;
-            color: #667eea;
-            margin-bottom: 30px;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .content-item {
-            background: #f8f9fa;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-        }
-
-        .content-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
-
-        .content-cover {
-            width: 100%;
-            height: 250px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .content-cover img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .content-item:hover .content-cover img {
-            transform: scale(1.05);
-        }
-
-        .content-icon {
-            font-size: 80px;
-            color: white;
-            opacity: 0.9;
-        }
-
-        .content-info {
-            padding: 20px;
-        }
-
-        .content-title {
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #667eea;
-            margin-bottom: 5px;
-        }
-
-        .content-creator {
-            font-size: 1em;
-            color: #764ba2;
-            margin-bottom: 8px;
-            font-weight: 500;
         }
 
         .content-details {
@@ -332,6 +223,31 @@
             text-align: center;
             margin-top: 40px;
         }
+
+        /* Section Go to Top Buttons */
+        .section-button-container {
+            text-align: center;
+            margin: 30px 0 50px 0;
+        }
+
+        .section-go-to-top {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            font-weight: 500;
+        }
+
+        .section-go-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        }
         
         @media (max-width: 768px) {
             .blog-header h1 {
@@ -353,6 +269,11 @@
 
             .section-title {
                 font-size: 1.5em;
+            }
+
+            .section-go-to-top {
+                padding: 10px 25px;
+                font-size: 0.9em;
             }
         }
     </style>
@@ -382,6 +303,7 @@
                         <div class="content-details">5:12</div>
                         <div class="content-year">Album: Fetty Wap(Deluxe)</div>
                         <span class="content-genre">Hip Hop</span>
+                        <div class="rating">⭐ 10/10</div>
                         <audio class="audio-player" controls style="width: 100%; margin-top: 15px; border-radius: 5px;">
                             <source src="AUDIO/Fetty Wap - Again [Augio Only].mp3" type="audio/mpeg">
                             Your browser does not support the audio element.
@@ -399,6 +321,7 @@
                         <div class="content-details">3:32</div>
                         <div class="content-year">Album: After Hours</div>
                         <span class="content-genre">R&B</span>
+                        <div class="rating">⭐ 10/10</div>
                         <audio class="audio-player" controls style="width: 100%; margin-top: 15px; border-radius: 5px;">
                             <source src="Poison- Brent Faiyaz (lyrics).mp3" type="audio/mpeg">
                             Your browser does not support the audio element.
@@ -416,6 +339,7 @@
                         <div class="content-details">3:40</div>
                         <div class="content-year">Album: Encore</div>
                         <span class="content-genre">EDM</span>
+                        <div class="rating">⭐ 10/10</div>
                         <audio class="audio-player" controls style="width: 100%; margin-top: 15px; border-radius: 5px;">
                             <source src="DJ Snake - Middle (Lyrics) ft. Bipolar Sunshine.mp3" type="audio/mpeg">
                             Your browser does not support the audio element.
@@ -433,6 +357,7 @@
                         <div class="content-details">5:54</div>
                         <div class="content-year">Album: Need You</div>
                         <span class="content-genre">Rap</span>
+                        <div class="rating">⭐ 10/10</div>
                         <audio class="audio-player" controls style="width: 100%; margin-top: 15px; border-radius: 5px;">
                             <source src="AUDIO/Need You - Ex Battalion (Lyrics) Gusto Ko Lang Naman Ang Lambing Mo.mp3" type="audio/mpeg">
                             Your browser does not support the audio element.
@@ -450,6 +375,7 @@
                         <div class="content-details">3:32</div>
                         <div class="content-year">Album: Only Jah Jah knows</div>
                         <span class="content-genre">Chill</span>
+                        <div class="rating">⭐ 10/10</div>
                         <audio class="audio-player" controls style="width: 100%; margin-top: 15px; border-radius: 5px;">
                             <source src="AUDIO/Only Jah Jah Knows.mp3" type="audio/mpeg">
                             Your browser does not support the audio element.
@@ -457,6 +383,10 @@
                     </div>
                 </div>
 
+            </div>
+
+            <div class="section-button-container">
+                <button class="section-go-to-top" onclick="scrollToTop()">↑ Back to Top</button>
             </div>
 
             <h2 class="section-title">🎬 Movies</h2>
@@ -476,7 +406,7 @@
                         </div>
                         <span class="content-genre">Drama</span>
                         <span class="content-genre">Action</span>
-                        <div class="rating">⭐ 7.3/10</div>
+                        <div class="rating">⭐ 10/10</div>
                         <div class="video-container">
                             <iframe width="100%" height="200" src="https://www.youtube.com/embed/XY8amUImEu0?si=sp5Qaz0UaWAR0EbB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
@@ -497,7 +427,7 @@
                         </div>
                         <span class="content-genre">Animation</span>
                         <span class="content-genre">Comedy</span>
-                        <div class="rating">⭐ 7.6/10</div>
+                        <div class="rating">⭐ 10/10</div>
                         <div class="video-container">
                             <iframe width="100%" height="200" src="https://www.youtube.com/embed/zzCZ1W_CUoI?si=ONThq_BCIgJlU_hL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
@@ -518,7 +448,7 @@
                         </div>
                         <span class="content-genre">Animation</span>
                         <span class="content-genre">Comedy</span>
-                        <div class="rating">⭐ 7.3/10</div>
+                        <div class="rating">⭐ 10/10</div>
                         <div class="video-container">
                             <iframe width="100%" height="200" src="https://www.youtube.com/embed/TlbnGSMJQbQ?si=dQh-h8PB4JPKZ5l8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
@@ -539,7 +469,7 @@
                         </div>
                         <span class="content-genre">Animation</span>
                         <span class="content-genre">Comedy</span>
-                        <div class="rating">⭐ 6.2/10</div>
+                        <div class="rating">⭐ 10/10</div>
                         <div class="video-container">
                             <iframe width="100%" height="200" src="https://www.youtube.com/embed/6DBi41reeF0?si=hQj_5DTdIUdxQhcF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
@@ -560,13 +490,17 @@
                         </div>
                         <span class="content-genre">Animation</span>
                         <span class="content-genre">Comedy</span>
-                        <div class="rating">⭐ 6.2/10</div>
+                        <div class="rating">⭐ 10/10</div>
                         <div class="video-container">
                             <iframe width="100%" height="200" src="https://www.youtube.com/embed/qQlr9-rF32A?si=cWE3a-1WfQZ9r1Mc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
 
+            </div>
+
+            <div class="section-button-container">
+                <button class="section-go-to-top" onclick="scrollToTop()">↑ Back to Top</button>
             </div>
 
             <h2 class="section-title">📺 TV Shows</h2>
@@ -586,7 +520,7 @@
                         </div>
                         <span class="content-genre">Crime</span>
                         <span class="content-genre">Drama</span>
-                        <div class="rating">⭐ 9.5/10</div>
+                        <div class="rating">⭐ 10/10</div>
                         <div class="video-container">
                             <iframe width="100%" height="200" src="https://www.youtube.com/embed/VFkjBy2b50Q?si=GaarUjw7QD7aX5bp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
@@ -607,7 +541,7 @@
                         </div>
                         <span class="content-genre">Sci-Fi</span>
                         <span class="content-genre">Horror</span>
-                        <div class="rating">⭐ 8.7/10</div>
+                        <div class="rating">⭐ 10/10</div>
                         <div class="video-container">
                             <iframe width="100%" height="200" src="https://www.youtube.com/embed/b9EkMc79ZSU?si=gZexPF7DTLSZ8HFF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
@@ -628,7 +562,7 @@
                         </div>
                         <span class="content-genre">Drama</span>
                         <span class="content-genre">Legal</span>
-                        <div class="rating">⭐ 8.4/10</div>
+                        <div class="rating">⭐ 10/10</div>
                         <div class="video-container">
                             <iframe width="100%" height="200" src="https://www.youtube.com/embed/cUnkjEIW2-o?si=0prEmpYArRah_HZm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
@@ -649,7 +583,7 @@
                         </div>
                         <span class="content-genre">Fantasy</span>
                         <span class="content-genre">Drama</span>
-                        <div class="rating">⭐ 9.2/10</div>
+                        <div class="rating">⭐ 10/10</div>
                         <div class="video-container">
                             <iframe width="100%" height="200" src="https://www.youtube.com/embed/KPLWWIOCOOQ?si=DTVR-gl2JlS_osgO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
@@ -670,7 +604,7 @@
                         </div>
                         <span class="content-genre">Animation</span>
                         <span class="content-genre">Comedy</span>
-                        <div class="rating">⭐ 8.5/10</div>
+                        <div class="rating">⭐ 10/10</div>
                         <div class="video-container">
                             <iframe width="100%" height="200" src="https://www.youtube.com/embed/r6GRGEw7P9I?si=yy9_MmxzE1SyhPsf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
@@ -679,10 +613,24 @@
 
             </div>
 
+            <div class="section-button-container">
+                <button class="section-go-to-top" onclick="scrollToTop()">↑ Back to Top</button>
+            </div>
+
             <div class="button-container">
                 <a href="index.html" class="back-button">← Back to Home</a>
             </div>
         </div>
     </div>
+
+    <script>
+        /* para mas smooth */
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 </html>
