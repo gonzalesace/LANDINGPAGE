@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="author" content="ACE M. GONZALES">
-  <title>My Beats - Ace Gonzales</title>
+  <title>My Movies & TV Shows - Ace Gonzales</title>
   <style>
         * {
             margin: 0;
@@ -68,14 +68,27 @@
             padding: 50px 40px;
         }
 
-        .beats-grid {
+        .section-title {
+            font-size: 2em;
+            color: #667eea;
+            margin-bottom: 30px;
+            margin-top: 40px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        .content-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 30px;
             margin-bottom: 40px;
         }
 
-        .beat-item {
+        .content-item {
             background: #f8f9fa;
             border-radius: 10px;
             overflow: hidden;
@@ -83,12 +96,12 @@
             transition: all 0.3s ease;
         }
 
-        .beat-item:hover {
+        .content-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0,0,0,0.3);
         }
 
-        .beat-cover {
+        .content-cover {
             width: 100%;
             height: 250px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -99,55 +112,55 @@
             overflow: hidden;
         }
 
-        .beat-cover img {
+        .content-cover img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.3s ease;
         }
 
-        .beat-item:hover .beat-cover img {
+        .content-item:hover .content-cover img {
             transform: scale(1.05);
         }
 
-        .beat-icon {
+        .content-icon {
             font-size: 80px;
             color: white;
             opacity: 0.9;
         }
 
-        .beat-info {
+        .content-info {
             padding: 20px;
         }
 
-        .beat-title {
+        .content-title {
             font-size: 1.3em;
             font-weight: bold;
             color: #667eea;
             margin-bottom: 5px;
         }
 
-        .beat-artist {
+        .content-creator {
             font-size: 1em;
             color: #764ba2;
             margin-bottom: 8px;
             font-weight: 500;
         }
 
-        .beat-details {
+        .content-details {
             color: #666;
             font-size: 0.95em;
             margin-bottom: 10px;
         }
 
-        .beat-album {
+        .content-year {
             color: #555;
             font-size: 0.9em;
             font-weight: 500;
             margin-bottom: 8px;
         }
 
-        .beat-description {
+        .content-description {
             color: #666;
             font-size: 0.9em;
             line-height: 1.5;
@@ -155,7 +168,7 @@
             font-style: italic;
         }
 
-        .beat-genre {
+        .content-genre {
             display: inline-block;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -166,9 +179,133 @@
             margin-bottom: 8px;
         }
 
-        .audio-player {
+        .rating {
+            color: #ffd700;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .section-title {
+            font-size: 2em;
+            color: #667eea;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .content-item {
+            background: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .content-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .content-cover {
             width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .content-item:hover .content-cover img {
+            transform: scale(1.05);
+        }
+
+        .content-icon {
+            font-size: 80px;
+            color: white;
+            opacity: 0.9;
+        }
+
+        .content-info {
+            padding: 20px;
+        }
+
+        .content-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .content-creator {
+            font-size: 1em;
+            color: #764ba2;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .content-details {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+
+        .content-year {
+            color: #555;
+            font-size: 0.9em;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .content-description {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .content-genre {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .rating {
+            color: #ffd700;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .video-container {
             margin-top: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
             border-radius: 5px;
         }
 
@@ -205,13 +342,17 @@
                 padding: 30px 25px;
             }
 
-            .beats-grid {
+            .content-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
 
-            .beat-cover {
+            .content-cover {
                 height: 200px;
+            }
+
+            .section-title {
+                font-size: 1.5em;
             }
         }
     </style>
@@ -219,81 +360,97 @@
 <body>
     <div class="blog-container">
         <div class="blog-header">
-            <p class="greeting">My Music Collection</p>
+            <p class="greeting">My Entertainment Collection</p>
             
-            <h1><span class="highlight">My Beats</span></h1>
+            <h1><span class="highlight">My Beats, Movies & TV Shows</span></h1>
             
-            <p class="subtitle">A collection of my musical creations and productions</p>
+            <p class="subtitle">A collection of my favorite music, films, and series</p>
         </div>
 
         
         <div class="blog-content">
-            <div class="beats-grid">
+            <h2 class="section-title">🎵 My Beats</h2>
+            <div class="content-grid">
                 
-                <div class="beat-item">
-                    <div class="beat-info">
-                        <div class="beat-title">Again</div>
-                        <div class="beat-artist">Fetty Wap</div>
-                        <div class="beat-details">5:12</div>
-                        <div class="beat-album">Album: Fetty Wap(Deluxe)</div>
-                        <span class="beat-genre">Hip Hop</span>
-                        <audio class="audio-player" controls>
+                <div class="content-item">
+                    <div class="content-cover">
+                        <img src="PICTURES/again.jpg" alt="Again - Fetty Wap">
+                    </div>
+                    <div class="content-info">
+                        <div class="content-title">Again</div>
+                        <div class="content-creator">Fetty Wap</div>
+                        <div class="content-details">5:12</div>
+                        <div class="content-year">Album: Fetty Wap(Deluxe)</div>
+                        <span class="content-genre">Hip Hop</span>
+                        <audio class="audio-player" controls style="width: 100%; margin-top: 15px; border-radius: 5px;">
                             <source src="AUDIO/Fetty Wap - Again [Augio Only].mp3" type="audio/mpeg">
                             Your browser does not support the audio element.
                         </audio>
                     </div>
                 </div>
 
-                <div class="beat-item">
-                    <div class="beat-info">
-                        <div class="beat-title">Poison</div>
-                        <div class="beat-artist">Brent Faiyaz</div>
-                        <div class="beat-details">3:32</div>
-                        <div class="beat-album">Album: After Hours</div>
-                        <span class="beat-genre">R&B</span>
-                        <audio class="audio-player" controls>
+                <div class="content-item">
+                    <div class="content-cover">
+                        <img src="PICTURES/poison.jpg" alt="Poison - Brent Faiyaz">
+                    </div>
+                    <div class="content-info">
+                        <div class="content-title">Poison</div>
+                        <div class="content-creator">Brent Faiyaz</div>
+                        <div class="content-details">3:32</div>
+                        <div class="content-year">Album: After Hours</div>
+                        <span class="content-genre">R&B</span>
+                        <audio class="audio-player" controls style="width: 100%; margin-top: 15px; border-radius: 5px;">
                             <source src="Poison- Brent Faiyaz (lyrics).mp3" type="audio/mpeg">
                             Your browser does not support the audio element.
                         </audio>
                     </div>
                 </div>
 
-                <div class="beat-item">
-                    <div class="beat-info">
-                        <div class="beat-title">Middle</div>
-                        <div class="beat-artist">DJ Snake</div>
-                        <div class="beat-details">3:40</div>
-                        <div class="beat-album">Album: Encore</div>
-                        <span class="beat-genre">EDM</span>
-                        <audio class="audio-player" controls>
+                <div class="content-item">
+                    <div class="content-cover">
+                        <img src="PICTURES/middle.jpg" alt="Middle - DJ Snake">
+                    </div>
+                    <div class="content-info">
+                        <div class="content-title">Middle</div>
+                        <div class="content-creator">DJ Snake</div>
+                        <div class="content-details">3:40</div>
+                        <div class="content-year">Album: Encore</div>
+                        <span class="content-genre">EDM</span>
+                        <audio class="audio-player" controls style="width: 100%; margin-top: 15px; border-radius: 5px;">
                             <source src="DJ Snake - Middle (Lyrics) ft. Bipolar Sunshine.mp3" type="audio/mpeg">
                             Your browser does not support the audio element.
                         </audio>
                     </div>
                 </div>
 
-                <div class="beat-item">
-                    <div class="beat-info">
-                        <div class="beat-title">Need You</div>
-                        <div class="beat-artist">Ex Battalaion</div>
-                        <div class="beat-details">5:54</div>
-                        <div class="beat-album">Album: Need You</div>
-                        <span class="beat-genre">Rap</span>
-                        <audio class="audio-player" controls>
+                <div class="content-item">
+                    <div class="content-cover">
+                        <img src="PICTURES/needyou.jpg" alt="Need You - Ex Battalion">
+                    </div>
+                    <div class="content-info">
+                        <div class="content-title">Need You</div>
+                        <div class="content-creator">Ex Battalaion</div>
+                        <div class="content-details">5:54</div>
+                        <div class="content-year">Album: Need You</div>
+                        <span class="content-genre">Rap</span>
+                        <audio class="audio-player" controls style="width: 100%; margin-top: 15px; border-radius: 5px;">
                             <source src="AUDIO/Need You - Ex Battalion (Lyrics) Gusto Ko Lang Naman Ang Lambing Mo.mp3" type="audio/mpeg">
                             Your browser does not support the audio element.
                         </audio>
                     </div>
                 </div>
 
-                <div class="beat-item">
-                    <div class="beat-info">
-                        <div class="beat-title">Only Jah Jah knows</div>
-                        <div class="beat-artist">Kanaka fyah</div>
-                        <div class="beat-details">3:32</div>
-                        <div class="beat-album">Album: Only Jah Jah knows</div>
-                        <span class="beat-genre">Chill</span>
-                        <audio class="audio-player" controls>
+                <div class="content-item">
+                    <div class="content-cover">
+                        <img src="IMAGES/kanaka-fyah-only-jah-jah-knows.jpg" alt="Only Jah Jah knows - Kanaka fyah">
+                    </div>
+                    <div class="content-info">
+                        <div class="content-title">Only Jah Jah knows</div>
+                        <div class="content-creator">Kanaka fyah</div>
+                        <div class="content-details">3:32</div>
+                        <div class="content-year">Album: Only Jah Jah knows</div>
+                        <span class="content-genre">Chill</span>
+                        <audio class="audio-player" controls style="width: 100%; margin-top: 15px; border-radius: 5px;">
                             <source src="AUDIO/Only Jah Jah Knows.mp3" type="audio/mpeg">
                             Your browser does not support the audio element.
                         </audio>
@@ -302,8 +459,228 @@
 
             </div>
 
+            <h2 class="section-title">🎬 Movies</h2>
+            <div class="content-grid">
+                
+                <div class="content-item">
+                    <div class="content-cover">
+                        <img src="PICTURES/karatekid.jpg" alt="Karate Kid">
+                    </div>
+                    <div class="content-info">
+                        <div class="content-title">Karate Kid</div>
+                        <div class="content-creator">Directed by John G. Avildsen</div>
+                        <div class="content-details">2h 6min</div>
+                        <div class="content-year">Released: 1984</div>
+                        <div class="content-description">
+                            A martial arts master agrees to teach karate to a bullied teenager.
+                        </div>
+                        <span class="content-genre">Drama</span>
+                        <span class="content-genre">Action</span>
+                        <div class="rating">⭐ 7.3/10</div>
+                        <div class="video-container">
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/XY8amUImEu0?si=sp5Qaz0UaWAR0EbB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-item">
+                    <div class="content-cover">
+                        <img src="PICTURES/despicableme.jpg" alt="Despicable Me">
+                    </div>
+                    <div class="content-info">
+                        <div class="content-title">Despicable Me</div>
+                        <div class="content-creator">Directed by Pierre Coffin & Chris Renaud</div>
+                        <div class="content-details">1h 35min</div>
+                        <div class="content-year">Released: 2010</div>
+                        <div class="content-description">
+                            A supervillain's life changes when he adopts three orphan girls.
+                        </div>
+                        <span class="content-genre">Animation</span>
+                        <span class="content-genre">Comedy</span>
+                        <div class="rating">⭐ 7.6/10</div>
+                        <div class="video-container">
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/zzCZ1W_CUoI?si=ONThq_BCIgJlU_hL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-item">
+                    <div class="content-cover">
+                        <img src="PICTURES/despicableme2.jpg" alt="Despicable Me 2">
+                    </div>
+                    <div class="content-info">
+                        <div class="content-title">Despicable Me 2</div>
+                        <div class="content-creator">Directed by Pierre Coffin & Chris Renaud</div>
+                        <div class="content-details">1h 38min</div>
+                        <div class="content-year">Released: 2013</div>
+                        <div class="content-description">
+                            Gru is recruited by the Anti-Villain League to help deal with a powerful new super criminal.
+                        </div>
+                        <span class="content-genre">Animation</span>
+                        <span class="content-genre">Comedy</span>
+                        <div class="rating">⭐ 7.3/10</div>
+                        <div class="video-container">
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/TlbnGSMJQbQ?si=dQh-h8PB4JPKZ5l8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-item">
+                    <div class="content-cover">
+                        <img src="PICTURES/despicableme3.jpg" alt="Despicable Me 3">
+                    </div>
+                    <div class="content-info">
+                        <div class="content-title">Despicable Me 3</div>
+                        <div class="content-creator">Directed by Pierre Coffin & Kyle Balda</div>
+                        <div class="content-details">1h 30min</div>
+                        <div class="content-year">Released: 2017</div>
+                        <div class="content-description">
+                            Gru meets his long-lost charming twin brother Dru who wants to team up with him for one last criminal heist.
+                        </div>
+                        <span class="content-genre">Animation</span>
+                        <span class="content-genre">Comedy</span>
+                        <div class="rating">⭐ 6.2/10</div>
+                        <div class="video-container">
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/6DBi41reeF0?si=hQj_5DTdIUdxQhcF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-item">
+                    <div class="content-cover">
+                        <img src="PICTURES/despicableme4.jpg" alt="Despicable Me 4">
+                    </div>
+                    <div class="content-info">
+                        <div class="content-title">Despicable Me 4</div>
+                        <div class="content-creator">Directed by Chris Renaud</div>
+                        <div class="content-details">1h 34min</div>
+                        <div class="content-year">Released: 2024</div>
+                        <div class="content-description">
+                            Gru welcomes a new member to the family, Gru Jr., who's intent on tormenting his dad.
+                        </div>
+                        <span class="content-genre">Animation</span>
+                        <span class="content-genre">Comedy</span>
+                        <div class="rating">⭐ 6.2/10</div>
+                        <div class="video-container">
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/qQlr9-rF32A?si=cWE3a-1WfQZ9r1Mc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <h2 class="section-title">📺 TV Shows</h2>
+            <div class="content-grid">
+                
+                <div class="content-item">
+                    <div class="content-cover">
+                        <img src="PICTURES/breakingbad.jpg" alt="Breaking Bad">
+                    </div>
+                    <div class="content-info">
+                        <div class="content-title">Breaking Bad</div>
+                        <div class="content-creator">Created by Vince Gilligan</div>
+                        <div class="content-details">5 Seasons • 62 Episodes</div>
+                        <div class="content-year">2008 - 2013</div>
+                        <div class="content-description">
+                            A chemistry teacher diagnosed with cancer turns to producing meth to secure his family's future.
+                        </div>
+                        <span class="content-genre">Crime</span>
+                        <span class="content-genre">Drama</span>
+                        <div class="rating">⭐ 9.5/10</div>
+                        <div class="video-container">
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/VFkjBy2b50Q?si=GaarUjw7QD7aX5bp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-item">
+                    <div class="content-cover">
+                        <img src="PICTURES/strangerthings.jpg" alt="Stranger Things">
+                    </div>
+                    <div class="content-info">
+                        <div class="content-title">Stranger Things</div>
+                        <div class="content-creator">Created by The Duffer Brothers</div>
+                        <div class="content-details">4 Seasons • 42 Episodes</div>
+                        <div class="content-year">2016 - Present</div>
+                        <div class="content-description">
+                            When a young boy vanishes, a small town uncovers a mystery involving secret experiments and supernatural forces.
+                        </div>
+                        <span class="content-genre">Sci-Fi</span>
+                        <span class="content-genre">Horror</span>
+                        <div class="rating">⭐ 8.7/10</div>
+                        <div class="video-container">
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/b9EkMc79ZSU?si=gZexPF7DTLSZ8HFF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-item">
+                    <div class="content-cover">
+                        <img src="PICTURES/suits.jpg" alt="Suits">
+                    </div>
+                    <div class="content-info">
+                        <div class="content-title">Suits</div>
+                        <div class="content-creator">Created by Aaron Korsh</div>
+                        <div class="content-details">9 Seasons • 134 Episodes</div>
+                        <div class="content-year">2011 - 2019</div>
+                        <div class="content-description">
+                            A college dropout starts working as a law associate for Harvey Specter despite never having attended law school.
+                        </div>
+                        <span class="content-genre">Drama</span>
+                        <span class="content-genre">Legal</span>
+                        <div class="rating">⭐ 8.4/10</div>
+                        <div class="video-container">
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/cUnkjEIW2-o?si=0prEmpYArRah_HZm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-item">
+                    <div class="content-cover">
+                        <img src="PICTURES/got.jpg" alt="Game of Thrones">
+                    </div>
+                    <div class="content-info">
+                        <div class="content-title">Game of Thrones</div>
+                        <div class="content-creator">Created by David Benioff & D.B. Weiss</div>
+                        <div class="content-details">8 Seasons • 73 Episodes</div>
+                        <div class="content-year">2011 - 2019</div>
+                        <div class="content-description">
+                            Nine noble families fight for control over the lands of Westeros while an ancient enemy returns.
+                        </div>
+                        <span class="content-genre">Fantasy</span>
+                        <span class="content-genre">Drama</span>
+                        <div class="rating">⭐ 9.2/10</div>
+                        <div class="video-container">
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/KPLWWIOCOOQ?si=DTVR-gl2JlS_osgO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-item">
+                    <div class="content-cover">
+                        <img src="PICTURES/boondocks.jpg" alt="The Boondocks">
+                    </div>
+                    <div class="content-info">
+                        <div class="content-title">The Boondocks</div>
+                        <div class="content-creator">Created by Aaron McGruder</div>
+                        <div class="content-details">4 Seasons • 55 Episodes</div>
+                        <div class="content-year">2005 - 2014</div>
+                        <div class="content-description">
+                            Two young brothers move to the suburbs with their grandfather, bringing urban culture to the neighborhood.
+                        </div>
+                        <span class="content-genre">Animation</span>
+                        <span class="content-genre">Comedy</span>
+                        <div class="rating">⭐ 8.5/10</div>
+                        <div class="video-container">
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/r6GRGEw7P9I?si=yy9_MmxzE1SyhPsf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
             <div class="button-container">
-                <a href="PHOTOGALLERY.html" class="back-button">← Back to Gallery</a>
+                <a href="index.html" class="back-button">← Back to Home</a>
             </div>
         </div>
     </div>
