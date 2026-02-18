@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="ACE M. GONZALES">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dream Places to Visit - Ace Gonzales</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.8;
+      color: #000000;
+      background: #EEFFFF;
+      padding: 20px;
+    }
+    
+    .blog-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      overflow: hidden;
+    }
+    
+    .blog-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 60px 40px;
+      text-align: center;
+      border-bottom: 5px solid white;
+    }
+    
+    .blog-header h1 {
+      font-size: 3em;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    
+    .subtitle {
+      font-size: 1.1em;
+      opacity: 0.95;
+    }
+    
+    .blog-content {
+      padding: 50px 40px;
+    }
+    
+    .intro-text {
+      font-size: 1.1em;
+      color: #000000;
+      margin-bottom: 40px;
+      padding: 25px;
+      background: #f8f9fa;
+      border-left: 5px solid #667eea;
+      border-radius: 5px;
+      text-align: center;
+    }
+    
+    .places-collage {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 50px;
+    }
+    
+    .place-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+      position: relative;
+    }
+    
+    .place-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    
+    .place-image {
+      width: 100%;
+      height: 250px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 3em;
+    }
+    
+    .place-info {
+      padding: 20px;
+    }
+    
+    .place-info h3 {
+      color: #667eea;
+      margin-bottom: 10px;
+      font-size: 1.5em;
+    }
+    
+    .place-info p {
+      color: #666;
+      line-height: 1.6;
+    }
+    
+    .image-map-container {
+      margin: 40px 0;
+      padding: 30px;
+      background: #f8f9fa;
+      border-radius: 10px;
+    }
+    
+    .image-map-container h2 {
+      color: #667eea;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .map-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .map-shape {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5em;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+    
+    .map-shape:hover {
+      transform: scale(1.05);
+    }
+    
+    .circle {
+      border-radius: 50%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .square {
+      background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    }
+    
+    .polygon {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+    
+    .back-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 15px 40px;
+      text-decoration: none;
+      border-radius: 25px;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .back-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    
+    .button-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+    
+    @media (max-width: 968px) {
+      .places-collage {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .blog-header h1 {
+        font-size: 2em;
+      }
+      
+      .blog-content {
+        padding: 30px 25px;
+      }
+      
+      .places-collage {
+        grid-template-columns: 1fr;
+      }
+      
+      .map-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="blog-container">
+    <div class="blog-header">
+      <h1>Dream Places to Visit</h1>
+      <p class="subtitle">5 places I want to explore someday</p>
+    </div>
+    
+    <div class="blog-content">
+      <div class="intro-text">
+        These are the places I dream of visiting. Each destination holds a special meaning and experience I hope to have one day.
+      </div>
+      
+      <div class="places-collage">
+        <div class="place-card" id="paris">
+          <div class="place-image">🗼</div>
+          <div class="place-info">
+            <h3>Paris, France</h3>
+            <p>The city of lights and love. I want to see the Eiffel Tower, walk along the Seine, and experience French culture firsthand.</p>
+          </div>
+        </div>
+        
+        <div class="place-card" id="tokyo">
+          <div class="place-image">🗾</div>
+          <div class="place-info">
+            <h3>Tokyo, Japan</h3>
+            <p>A blend of tradition and technology. From ancient temples to neon-lit streets, Japan represents innovation and culture.</p>
+          </div>
+        </div>
+        
+        <div class="place-card" id="alps">
+          <div class="place-image">🏔️</div>
+          <div class="place-info">
+            <h3>Swiss Alps</h3>
+            <p>Breathtaking mountain views and pristine nature. I dream of hiking through the Alps and experiencing the peaceful beauty.</p>
+          </div>
+        </div>
+        
+        <div class="place-card" id="egypt">
+          <div class="place-image">🏜️</div>
+          <div class="place-info">
+            <h3>Cairo, Egypt</h3>
+            <p>Ancient wonders and rich history. I want to see the Great Pyramids of Giza and experience the mysteries of ancient civilization.</p>
+          </div>
+        </div>
+        
+        <div class="place-card" id="iceland">
+          <div class="place-image">🏞️</div>
+          <div class="place-info">
+            <h3>Iceland</h3>
+            <p>Land of fire and ice. Northern lights, volcanic landscapes, and epic waterfalls. A true adventure destination for the brave.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="image-map-container">
+        <h2>Image Map Shapes</h2>
+        <p style="text-align: center; margin-bottom: 20px; color: #666;">Click on the shapes to explore each destination</p>
+        
+        <!-- Image Map -->
+        <div style="text-align: center; margin-bottom: 30px;">
+          <img src="dream-map.jpg" alt="Dream Places Map" usemap="#dreammap" style="max-width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+        </div>
+        
+        <map name="dreammap">
+          <!-- Paris - Circle -->
+          <area shape="circle" coords="100,100,50" href="#paris" alt="Paris, France">
+          
+          <!-- Tokyo - Circle -->
+          <area shape="circle" coords="300,100,50" href="#tokyo" alt="Tokyo, Japan">
+          
+          <!-- Swiss Alps - Rectangle -->
+          <area shape="rect" coords="50,250,200,350" href="#alps" alt="Swiss Alps">
+          
+          <!-- Egypt - Polygon (Diamond) -->
+          <area shape="poly" coords="325,250,400,300,325,350,250,300" href="#egypt" alt="Cairo, Egypt">
+          
+          <!-- Iceland - Rectangle -->
+          <area shape="rect" coords="450,250,600,350" href="#iceland" alt="Iceland">
+        </map>
+        
+        <div class="map-grid">
+          <div class="map-shape circle">Circle</div>
+          <div class="map-shape square">Square</div>
+          <div class="map-shape polygon">Diamond</div>
+        </div>
+      </div>
+      
+      <div class="button-container">
+        <a href="index.html" class="back-button">← Back to Home</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
