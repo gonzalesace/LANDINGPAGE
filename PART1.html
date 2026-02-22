@@ -1,47 +1,175 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  
 <head>
-  <meta charset="UTF-8"
+  <meta charset="UTF-8">
   <meta name="author" content="ACE M. GONZALES">
-  <title>How AI is impacting IT lives right now.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How AI is impacting IT lives right now - Ace Gonzales</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Georgia, serif;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.8;
+      color: #000000;
+      background: #EEFFFF;
+      padding: 20px;
     }
-    
-    h1 {
+
+    .blog-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      overflow: hidden;
+    }
+
+    .blog-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 60px 40px;
       text-align: center;
-      color: #000;
+      border-bottom: 5px solid white;
     }
-    
-    h2 {
-      color: #000;
-      margin-top: 20px;
+
+    .blog-header h1 {
+      font-size: 3em;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
     }
-    
-    p {
+
+    .subtitle {
+      font-size: 1.1em;
+      opacity: 0.95;
+    }
+
+    .blog-content {
+      padding: 50px 40px;
+    }
+
+    .intro-text {
+      font-size: 1.1em;
+      color: #000000;
+      margin-bottom: 40px;
+      padding: 25px;
+      background: #f8f9fa;
+      border-left: 5px solid #667eea;
+      border-radius: 5px;
+    }
+
+    .intro-text h2 {
+      color: #667eea;
+      margin-bottom: 15px;
+      font-size: 1.5em;
+    }
+
+    .intro-text p {
       margin-bottom: 15px;
     }
 
+    .back-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 15px 40px;
+      text-decoration: none;
+      border-radius: 25px;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .back-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    mark {
+      background-color: #FFE600;
+      padding: 0 4px;
+      border-radius: 3px;
+    }
   </style>
 </head>
 <body>
-  
-  <h1>How AI is impacting IT lives right now</h1>
-  <h2> Introduction</h2>
-  <p> Last sem, I had a programming project due. Normally, this would take me hourse. maybe even the whole night of debugging and googling error message. but this time, I used AI  to help me. Thirty minutes later, tapos na. I got a good grade, pero habang sinusubmit ko, i felt weird. As a second-year IT student, AI is everywhere, and honestly, I'm confused kung tama ba na umaasa ako dito.</p>
-  
-  <h2>Body</h2>
-  
-  <p> Naalala ko nung first year pa lang ako, I spent hours trying to understand loops and arrays. Grabe ung frustration, sobrang hirap intindhin. Now? I just ask claude(claude.ai) to explain it to me and then boom gets kona. During exams, AI helps me review faster by creating practice problems and checking my answer. My grades improved, and I'm understanding topics better.</p>
-  
-  <p> Here's what bothers me. Minsan hindi ko na trinatry mag aral. Hindi nakinig sa lesson? papasummary sa AI. May error sa code? AI. Kaya pag may mga exam tas wala ako review minsan I blanked out kasi di ako nakinig sa lecture </p>
-  
-  <h2>Conclusion</h2>
-    <p>So ayun, I'm stuck between two worlds. AI makes everything easier, but I'm worried I'm not building real skills. After thinking about it, here's what I decided to do.</p>
-    <p>First, I've decided to set some rules for myself with AI. For simple tasks or just reviewing code, okay lang ang AI. But for big projects and important lessons, I'll try solving it myself first. I'll give myself at least 30 minutes to struggle before asking AI for help.</p>
-    <p>Second, I'm forcing myself to understand every line of code. Kahit galing sa AI yung code, I'll study it carefully and rewrite it in my own style. If I can't explain it sa classmate ko, then I don't really understand it </p>
-    <p>Lastly, I'm trying to learn things na hindi magaling ang AI. Like talking with team members, understanding kung ano yung problema na dapat i-solve, and thinking creatively. Because when I graduate, employers won't just want coders, they'll want problem solvers na marunong lang mag-code. I don't know if tama yung ginagawa ko, pero this is my best plan: use AI as a tool para mag-learn faster, hindi para palitan yung learning itself.</p>
+  <div class="blog-container">
+
+    <div class="blog-header">
+      <h1>How AI is Impacting IT Lives Right Now</h1>
+      <p class="subtitle">A second-year IT student's honest thoughts on AI</p>
+    </div>
+
+    <div class="blog-content">
+
+      <div class="intro-text">
+        <h2>Introduction</h2>
+        <p>
+          Last sem, I had a <mark>programming project due</mark>. Normally, this would take me hours, 
+          maybe even the whole night of debugging and googling error messages. But this time, 
+          I used AI to help me. <mark>Thirty minutes later, tapos na.</mark> I got a good grade, pero 
+          habang sinusubmit ko, I felt weird. As a <mark>second-year IT student</mark>, AI is everywhere, 
+          and honestly, I'm confused kung tama ba na umaasa ako dito.
+        </p>
+      </div>
+
+      <div class="intro-text">
+        <h2>Body</h2>
+        <p>
+          Naalala ko nung first year pa lang ako, I spent hours trying to understand 
+          <mark>loops and arrays</mark>. Grabe yung frustration, sobrang hirap intindihin. Now? 
+          I just ask Claude to explain it to me and then boom, gets ko na. During exams, 
+          <mark>AI helps me review faster</mark> by creating practice problems and checking my answers. 
+          My grades improved, and I'm understanding topics better.
+        </p>
+        <p>
+          Here's what bothers me. <mark>Minsan hindi ko na trinatry mag-aral.</mark> Hindi nakinig 
+          sa lesson? Papasummary sa AI. May error sa code? AI. Kaya pag may exam tas wala 
+          akong review, <mark>minsan I blanked out kasi di ako nakinig sa lecture.</mark>
+        </p>
+      </div>
+
+      <div class="intro-text">
+        <h2>Conclusion</h2>
+        <p>
+          So ayun, I'm stuck between two worlds. <mark>AI makes everything easier</mark>, but I'm 
+          worried I'm not building real skills. After thinking about it, here's what I decided to do.
+        </p>
+        <p>
+          First, I've decided to <mark>set some rules for myself with AI</mark>. For simple tasks or 
+          just reviewing code, okay lang ang AI. But for big projects and important lessons, 
+          I'll try solving it myself first. <mark>I'll give myself at least 30 minutes to struggle 
+          before asking AI for help.</mark>
+        </p>
+        <p>
+          Second, I'm forcing myself to <mark>understand every line of code</mark>. Kahit galing sa 
+          AI yung code, I'll study it carefully and rewrite it in my own style. 
+          If I can't explain it sa classmate ko, then I don't really understand it.
+        </p>
+        <p>
+          Lastly, I'm trying to learn things na <mark>hindi magaling ang AI</mark>. Like talking with 
+          team members, understanding kung ano yung problema na dapat i-solve, and thinking 
+          creatively. Because when I graduate, <mark>employers won't just want coders, they'll want 
+          problem solvers</mark> na marunong lang mag-code. I don't know if tama yung ginagawa ko, 
+          pero this is my best plan: <mark>use AI as a tool para mag-learn faster, hindi para 
+          palitan yung learning itself.</mark>
+        </p>
+      </div>
+
+      <div class="button-container">
+        <a href="index.html" class="back-button">← Back to Home</a>
+      </div>
+
+    </div>
+  </div>
 </body>
-</html
+</html>
